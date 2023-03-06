@@ -24,7 +24,6 @@ io.on("connection", (socket) => {
 
   // Listen for audio stream from client
   socket.on("audio", (stream) => {
-    console.log("audio..");
     // Broadcast the stream to all other clients
     socket.broadcast.emit("audio", stream);
   });
